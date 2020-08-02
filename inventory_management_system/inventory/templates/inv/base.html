@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory</title>
+  </head>
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"/>
+
+  <body>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">USIM Device Maintenance and Management System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact HEP Now</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search">
+    </form>
+  </div>
+</nav>
+
+    <br>
+    <div class="container">
+
+      {% block body %}
+
+
+      {% endblock%}
+
+    </div>
+    <div class="report" style="width:800px; margin:0 auto;">
+      <p>Report on broken devices, materials and learning related materials so that it can be fixed on time!</p>
+      <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+      </svg>
+
+    </div>
+
+  </body>
+</html>
